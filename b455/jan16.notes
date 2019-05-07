@@ -1,0 +1,28 @@
+~ Bias-variance tradeoff
+~ Bias: difference between model and expectation; simple models have high bias
+~ Variance: how much the model changes as you change the parameters
+
+
+~ Have h(x): training data
+~ x*: validation data
+~ h(x*): approximation of f
+~ y*: observation
+~ Ideally: y* = h(x*)
+~ SSE
+~ Typically minimize y* - h(x*)
+
+~ z_bar is expected z
+~ E[(z - z_bar)^2] = E[z^2 - 2zz_bar + z_bar^2]
+~ = E(z^2) - 2E(zz_bar) + z_bar^2
+~ = E(z^2) - 2z_bar^2 + z_bar^2
+~ = E(z^2) - z_bar^2
+
+~ E = expectation
+~ E((y* - h(x*))^2) = E(y*^2 -2y*h(x*) + h(x*)^2)
+~ = E(y*^2) -2E(y*h(x*)) + E(h(x*)^2)
+~ = E[(y* - f(x*))^2] + f(x*)^2              // sqr a
+    - 2f(x*)h(x*)                            // -2ab
+    + E[(h(x*) - h_bar(x*))^2] + h_bar(x*)^2 // sqr b
+~ = E[(y* - f(x*))^2] + E[(h(x*) - h_bar(x*))^2] + [f(x*) - h_bar(x*)]^2
+#   `-------,-------'   `----------,-----------'   `--------,----------'
+#        noise                  variance         bias = expected - mean model

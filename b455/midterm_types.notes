@@ -1,0 +1,43 @@
+~ 15 T/F, don't need to justify
+~ 5 other questions
+~ 5+15=20=6
+~ How do the train on SVM
+~ Calculator aylmao
+~ No {proofs, derivations}
+
+~ Confusion matrix
+~ Accuracy metrics for binary classification
+~ Weight space
+~ GMM
+~ EM Algorithm
+~ Max likelihood model
+
+~ Connection between logistic regression & Adaline w/ Perceptron (different
+  activation function)
+~ Linear regression
+~ Logistic regression (how it worx)
+
+~ Backpropagation
+~ Universal approximation theorem
+~ Different activation functions
+~ Probabilistic interpretation for 2 classes (vs. logistic regression)
+~ Batch- or whole model
+~ When to stop learning?
+~ Time-series, autoencoder MLP
+
+~ "Instance-based learning vs eager learning"
+~ KD tree?
+~ Runtime for building KD tree to speed up KNN search
+
+~ SVM: MMLS
+~ Elements of SVM
+  ~ If given kernel, SVs, how to classify new data point?
+~ SVM for multi-class classification
+~ SVM for regression (geometric meaning)
+~ SVM regression vs linear regression
+~ Choice of kernel functions
+~ Soft separator
+
+~ Sentiment analysis
+~ Look at the slides and learn the stuff on the review guide
+~ Similarity graph, clustering words to pos/neg polarity

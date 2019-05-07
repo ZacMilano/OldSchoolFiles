@@ -1,0 +1,38 @@
+~ Focus on algorithms
+~ Weight space : space where dimensions are parameters of model
+  ~ A different point \in weight space represents a different model
+~ High-dimensional data -> harder ML problem
+~ Overfitting is a thing
+~ Confusion matrix : !->good, ?->bad
+#         Outputs
+#       C1  C2  C3
+#   C1  /!   ?   ?\
+#   C2 | ?   !   ? |
+#   C3  \?   ?   !/
+
+~ Sensitivity v specificity, precision v recall; recall == sensitivity
+~ Bin plots are dope
+  ~ A way to turn data into probability
+~ Bayes' rule
+~ Posterior prob gives best output as well as risk of choosing the wrong one
+~ Rare disease: 1/10,000 (10^-4)
+  ~ Test of disease w/ accuracy 0.99
+#     H = you have the disease
+#     T = test is +
+#                         P(T | H)*P(H)
+#     P(H | T) = -------------------------------
+#                P(T | H)*P(H) + P(T | -H)*P(-H)
+#              = (0.99 * 10^-4) / (0.99 * 10^-4 + 0.9999 * 10^-2)
+#              =~        10^-4  / (10^-4 + 10^-2)
+#              =~ 0.01
+~ Naive Bayes' classifier
+  ~ If features are independent,
+#   P(C | x1, ... , xn) = P(x1 | C) * ... * P(xn | C)
+~ Some basic statistics
+  ~ Average
+  ~ Variance (p32 of book)
+    ~ Var({xi}) = sum from i=1 to N of (xi - mean)^2
+  ~ Covariance (correlation)
+    ~ Cov({xi}, {yi}) = sqrt( sum from i=1 to N of (xi-mean_x)*(yi-mean_y) )
+    ~ Covariance matrix of a dataset, look it up
+~ Bias-variance tradeoff
