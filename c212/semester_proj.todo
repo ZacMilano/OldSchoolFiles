@@ -1,0 +1,25 @@
+[ ] Build an MVC web app
+    [ ] Wants an application that gives a list of quotes as they are in a
+        database somewhere. I get to choose whichever I want and make an edit,
+        ave, and go back to see the change in the list of quotes. Also can
+        add/delete quotes. This is the administrator interface.
+    [ ] The user interface is simpler: come and you will be given a random
+        quote.
+        Reload the page and a random quote will be posted (could be different
+        one than the one you were previously looking at (because of random
+        selection of quotes from a database)).
+    [ ] This project uses J A V A. Woah no way
+    [ ] Java Servlets (CGI/Python) and Java Server Pages (PHP)
+[ ] He will show us a working prototype
+[ ] Stage two will attempt to implement:
+    [ ] A "database" (the model)
+    [ ] A servlet to test it
+[ ] Stage 3
+    [ ] Adds views (screens) and controllers (servlets)
+[ ] Will also need to make a change to what we are given
+
+[ ] MVC is a composite OO pattern
+[ ] Steps in proj
+    [✓] Set up a server
+    [ ] Create, test model
+    [ ] Implement functionality as a collection of views/controller(s)

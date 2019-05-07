@@ -1,0 +1,89 @@
+1. (a) Run prob1.r to see an output of an estimate of P(A wins).
+
+   (b) Solving the equation:
+   
+       error = 1.96 / sqrt(4*M)
+   
+       for M leads to the equation:
+   
+       M = (.98/error)^2
+   
+       So, if I want my error to be .005 (+- .005 indicates that the width of the
+       confidence interval is 2 * .005, or .01), then I should conduct M = 38416
+       trials.
+   
+   (c) This statement means that if one were to conduct 38416 trials in the same
+       way, then 95% of the time, the interval defined by the estimated value of
+       P(A wins) +- the radius of the confidence interval (P_hat(A wins) +- .005,
+       in other words) will contain the true value of P(A wins). So, one can say
+       that the true value of P(A wins) is different from P_hat(A wins) by 0.5% or
+       less with 95% confidence (i.e., that statement will be true 95% of the
+       time).
+   
+   (d) I believe that the true probability of P(A wins) is 1/3. This is because
+       there are 2 cases out of the possible 6 final possibilities for the outcome
+       for each round in which player A wins.
+   
+       Cases:
+         A | B | C | Winner 
+        ---+---+---+--------
+         H | H | H | None. Replay
+         H | H | T |   C
+         H | T | H |   B
+         H | T | T |   A <--
+         T | H | H |   A <--
+         T | H | T |   B
+         T | T | H |   C
+         T | T | T | None. Replay
+
+2. - All my work for this problem is the code and comments in prob2.r.
+
+3. (a) The sample space Ω for the experiment is all possible pairings of cards
+       that are drawn from the same deck.
+
+       |Ω|, the number of elements in Ω, is choose(52,2), or 1326.
+
+   (b) Each rank is used by each of the four suits. There are 13 ranks. There
+       should therefore be 13 * choose(4,2) elements in Omega whose cards have the
+       same rank. This number comes out to be 78.
+
+   (c) The probability of drawing a pair is the proportion of pairs to |Ω| (the
+       number of elements in the sample space). This is 78/1326, or roughly
+       0.058823.
+
+4. (a) P(0 bullseyes) is choose(10,0)/(2^10), or 1/1024, or roughly 0.00097656.
+
+   (b) P(1 bullseyes) is choose(10,1)/(2^10), or 10/1024, or roughly 0.0097656.
+   
+   (c) P(2 bullseyes) is choose(10,2)/(2^10), or 45/1024, or roughly 0.043945.
+   
+   (d) P(3 bullseyes) is choose(10,3)/(2^10), or 120/1024, or roughly 0.11719.
+
+5. - For part (b), I re-used some of the code for part (a) in a loop.
+
+6. - First off, there are 10!/(10-2)! = 10*9 = 90 possible orderings of numbers
+     that A and B draw. This comes from the permutations function,
+     p(n,k) = n!/(n-k)!.
+
+   - P(A's number > B's number) = 45/90 = 0.5. This is because if A draws the
+     smallest number, B is guaranteed to draw a larger number. So from the
+     scenario in which A draws the smallest number, there are 0 outcomes in which
+     that number is bigger than the number that B draws.
+   
+   - If A draws the second smallest number, there is only one possible number from
+     the remaining 9 that B can choose from that is smaller than A's number.
+   
+   - If A draws the third smallest number, there are two possible numbers from the
+     remaining 9 that B can choose from that is smaller than A's number.
+   
+   - If A draws the fourth smallest number, there are three possible numbers from
+     the remaining 9 that B can choose from that is smaller than A's number.
+   
+   - These possibilities continue as so until A draws the largest number. Of
+     course, then, all 9 numbers that B can possibly draw are smaller than A's
+     number. So the total possible outcomes in which A's number > B's number is
+     the 9th triangle number (9+8+7+...+2+1), or 45. The proportion of this number
+     to the total number of equally likely outcomes is then the probability that A
+     chooses a number greater than what B chooses. This number is, again, 0.5.
+
+7. - All my work for this problem is the code and comments in prob7.r.

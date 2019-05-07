@@ -1,0 +1,96 @@
+  | var_1 . . . var_k | class
+--+-------. . .-------+------
+1 | _____ . . . _____ | _____
+2 | _____ . . . _____ | _____
+3 | _____ . . . _____ | _____
+. .   .   .       .   . _____
+. .   .     .     .   . _____
+. .   .       .   .   . _____
+N | _____ . . . _____ | _____
+
+Tree classifier performs variable selection by just.. not using some variables
+in the construction of the tree
+
+ENTROPY
+
+p = (p1, . . . , pk)
+sigma(p) = 1
+  |
+  |_.
+p | |_  .___.
+  | | |-| | |
+  |_|_|_|_|_|__
+
+H(p) = p1*log2(1/p1) + p2*log2(1/p2) + . . . + pk*log2(1/pk)
+^    = sigma(p_i * log2(1/p_i))
+|
+Entropy
+
+p_i = 1 -> log2(1/1) = 0. Not surprised to see this i-th outcome
+
+p_i = 1/1024 -> log2(1/(1/1024)) = 10. Would be surprised to see this i-th
+outcome
+
+--> Take weighted sum of how surprised you'd be to see each outcome, where
+weights are p_i
+
+H(p) measures "average surprise"
+
+EX                             |
+                               |_._._._.
+p = (1/4, 1/4, 1/4, 1/4)       |_|_|_|_|_
+H(p) = 4(1/4 * log2(1/4)) = 2
+                                  |  ._.
+p = (0, 1, 0, 0)                  |  | |
+H(p) = 0*log2(1/0) + 1*log2(1/1)  |__|_|_____
+     + 0*log2(1/0) + 0*log2(1/0)
+
+Entropy Facts                 Point mass
+                                   |
+1. H(p) >= 0                       v
+2. H(p) = 0 <=> p = (0, 0, . . . , 1, . . . , 0, 0)
+3. H(p) is maximized for "uniform" distributions
+
+Using H to find splits
+  |
+  | + + + +
+y |
+  |  o o o o
+  L__________
+       x
+Look at x
++  o  +  o    |    +  o  +  o
+p = .5 H = 1   p = .5 H = 1
+       ^
+2(.5 log2(1/(1/2)))
+Ave H = 1
+
+New split location:
+
+        +     |     o + o + o + o
+p = 1/8 H = 0   p = 7/8 H = 3/7log2(7/3) + 3/8log2(8/3) = ~.96
+Ave H = 1/8 * 0 + 7/8 * .98 = ~.86
+
+Split on y?
++
++   p = .5
++   H = 0
++
+-----   Ave H = 0
+o
+o   p = .5
+o   H = 0
+o
+
+Same problem of overfitting with Naive Bayes'
+5 variables
+|----|------|-----|----|
+    q1     q2    q3
+5 vars x 3 quantiles = 15 params
+2 class x 5 vars x 4 probs = 40 params
+total params = 15 + 40 = 55
+
+Tree classifier
+1000 params (as many as data points)
+
+==> More params -> more potential to overfit -> Bad generalization
