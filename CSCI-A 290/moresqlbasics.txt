@@ -1,0 +1,11 @@
+- Deletion rules
+  - Restrict deletion : the requested record cannot be deleted until all related
+    records in any "subordinate" (one <-> one) tables or in the "many" side of a
+    (one <-> many) tables are deleted
+  - Cascade deletion : deleting the requested record automatically deletes any
+    records in the "subordinate" or "many" tables
+    - TEN CUIDADO
+- Standards
+  - ANSI, ISO
+- SELECT, FROM : not optional
+- WHERE, GROUP BY, HAVING : optional

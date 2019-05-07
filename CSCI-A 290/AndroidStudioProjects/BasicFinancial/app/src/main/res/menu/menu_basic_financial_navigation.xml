@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- menu_basic_financial_navigation.xml
+
+Contains the menu items for the navigation drawer
+
+Created by: Zac Monroe
+Created on: 2/18/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - BasicFinancialMainActivity.java
+ - content_basic_financial_main.xml
+-->
+
+<!-- This is the outermost menu. -->
+<menu
+  android:id="@+id/nav"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context="edu.indiana.zcmonroe.basicfinancial.BasicFinancialMainActivity">
+  
+  <!-- This is for the link to the budgeting tool. -->
+  <item
+    android:id="@+id/budget_item"
+    android:orderInCategory="1"
+    android:title="@string/budgeting_title"
+    app:showAsAction="never"
+    android:onClick="onNavItemSelected" />
+  
+  <!-- This is for the link to the investing tool. -->
+  <item
+    android:id="@+id/invest_item"
+    android:orderInCategory="2"
+    android:title="@string/investing_title"
+    app:showAsAction="never"
+    android:onClick="onNavItemSelected" />
+  
+  <!-- This is for the link to the settings. -->
+  <item
+    android:id="@+id/settings_item"
+    android:orderInCategory="3"
+    android:title="@string/settings_title"
+    app:showAsAction="never"
+    android:onClick="onNavItemSelected" />
+  
+</menu>

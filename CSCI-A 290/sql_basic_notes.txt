@@ -1,0 +1,32 @@
+Network/relational databases
+- Components
+  - AT LEAST ONE FIELD: Primary Key
+    - Uniquely identifies each record
+  - The "subject" of a table is either an object or an event (in general)
+    - Be able to describe it with specific characteristics
+  - A "field" is the smallest structure in the table/database
+    - Represents a single characteristic of the "subject" of the table that
+      it belongs to
+    - Actually stores the data
+      - One and only one value
+      - Its name clearly identifies the "type" of data it stores
+        - FirstName LastName ZipCode are solid examples
+  - A "record" is a unique "instance" of the "subject" of the table
+    - Contains every "field" that defines it, even if some of those "fields"
+      contain no values
+    - Every instance must have a unique name/identifier (Primary Key)
+    - Think of object instances like in OOP
+  - A "key" is one of the crucial components that makes a relational database
+    relational
+    - Each one is a special "field" within the table that performs a specific
+      function
+      - Foreign keys link tables together
+  - A "view" is the result of a query: a virtual table composed of fields from
+    various "real" or "base" tables
+  - Types of relationships
+    - One-to-one
+    - One-to-many
+    - Many-to-many
+      - In a relational database you cannot directly create m-t-m
+        relationships between two tables
+      - Instead, create two m-t-o relationships using a linking tables

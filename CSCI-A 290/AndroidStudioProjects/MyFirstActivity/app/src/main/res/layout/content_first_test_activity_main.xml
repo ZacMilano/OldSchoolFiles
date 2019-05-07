@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+content_first_test_activity_main.xml
+
+Contains the activity's content xml code
+
+Created by: Zac Monroe
+Created on: 2/7/18
+Last modified by: Zac Monroe
+Last modified on: 2/7/18
+Assignment/Project: My First Activity/HW Project 2
+Part of: FirstTestActivityMain.java
+-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  tools:context="edu.indiana.zcmonroe.myfirstactivity.FirstTestActivityMainActivity"
+  tools:showIn="@layout/activity_first_test_main">
+  
+  <!--
+  I modified the following TextView's text value to be a value in strings.xml.
+  -->
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/main_screen_str"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

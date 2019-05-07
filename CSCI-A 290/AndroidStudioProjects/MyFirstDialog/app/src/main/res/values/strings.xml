@@ -1,0 +1,17 @@
+<!-- strings.xml
+Contains string values for this project
+Created by: Zac Monroe
+Created on: 2/7/18
+Last modified by: Zac Monroe
+Last modified on: 2/7/18
+Assignment/Project: My First Dialog
+Part of: content_main_dialog.xml
+-->
+<resources>
+  <string name="app_name">My First Dialog</string>
+  <string name="action_settings">Settings</string>
+  
+  <!-- These are the strings I added for the main activity. -->
+  <string name="TalkToMe">This is supposed to be a dialog; talk to me!</string>
+  <string name="ClickDialog">Click to display a dialog</string>
+</resources>

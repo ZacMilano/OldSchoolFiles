@@ -1,0 +1,45 @@
+-Application framework
+	-Activity manager
+    -Controls "application lifecycle"
+	-Content providers
+    -Shared data between apps
+	-Resource manager
+	-Location manager
+	-Notification manager
+
+-Applications != widgets
+
+-Activities
+  -In Android, only one application is in the foreground
+  -All launched apps/programs that have been launched
+   are held in the Application Stack
+  -"Back" button returns the last item on the stack to the foreground
+  -Each screen is represented by an Activity Class
+  -A single app can have many screens => activities
+
+-Building Blocks of activities
+  -1 Application
+  -1 or more activities, one per screen
+  -Linux process to "contain" them
+  -WOW: Process life cycle and Activity life cycle are not linked
+  -Activity can be "alive" even if its process is killed
+
+-Activity States
+  -onCreate(Bundle ...) initialize; create and instantiate
+  -onStart()    Activity about to be displayed
+  -onResume()   Activity is ready to interact with user
+  -onPause()    Activity is about to go to the "background" or be pushed onto
+                the Application Stack. If you need to save something, do it here
+  -onStop()     Activity is invisible to user
+  -onRestart()  From Stopped to visible to user
+  -onDestroy()
+
+-Well-formed XML things
+  -Has single root element
+  -All other elements are correctly nested
+
+-Other XML things
+  -Case-sensitive
+  -Convention: all lowercase letters
+
+-

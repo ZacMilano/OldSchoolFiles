@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- content_basic_financial_vertical_divider.xml
+
+Contains the information for the vertical divider that I use for the table.
+
+Created by: Zac Monroe
+Created on: 2/21/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - colors.xml
+-->
+
+<!--http://envyandroid.com/view-separators/-->
+<!-- I used a very basic "View" instance and just made its background color the target color. -->
+<View
+  android:id="@+id/view_vert_divider"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="1dp"
+  android:layout_height="match_parent"
+  android:background="@color/divider_light"/>

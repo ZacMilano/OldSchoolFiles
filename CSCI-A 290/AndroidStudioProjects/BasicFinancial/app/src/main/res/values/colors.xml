@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- colors.xml
+
+Contains the color values for the app
+
+Created by: Zac Monroe
+Created on: 2/19/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - [none]
+-->
+
+<resources>
+  <color name="colorPrimary">#3F51B5</color>
+  <color name="colorPrimaryDark">#303F9F</color>
+  <color name="colorAccent">#FF4081</color>
+  
+  <!-- These are the colors that I defined for elements
+       that deal with transactions (if the transaction
+       is one that adds money, it is green; otherwise
+       it is red). -->
+  <color name="money_in">#FF00AA00</color>
+  <color name="money_out">#FFAA0000</color>
+  
+  <!-- These are the colors for the table dividers. -->
+  <color name="divider_light">#FFDDDDDD</color>
+  <color name="divider_dark">#FF111111</color>
+</resources>

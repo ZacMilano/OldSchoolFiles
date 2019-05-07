@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- menu_first_real_app_settings.xml
+
+Menu resource file for the settings menu
+
+Created by: Zac Monroe
+Created on: 2/15/18
+Last modified by: Zac Monroe
+Last modified on: 2/17/18
+Assignment/Project: A290 Android First Real App
+Refers to:
+ - strings.xml
+-->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+  <item android:id="@+id/SettingsMenu"
+    android:title="@string/SettingsLabel"
+    android:alphabeticShortcut="@string/SettingsShortcut" />
+</menu>

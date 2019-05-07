@@ -1,0 +1,36 @@
+<!-- strings.xml
+Contains externally-used string values for the application's elements
+Created by: Zac Monroe
+Created on: 1/25/18
+Last Modified by: Zac Monroe
+Last Modified on: 1/29/18
+Assignment/Project: A290 Android - Android Calling
+Part of: Android Calling
+Referred to by:
+ - content_my_first_activity_main.xml
+-->
+
+<resources>
+  <string name="app_name">Android Calling</string>
+  <string name="action_settings">Settings</string>
+  
+  <!-- String value for the "MyFirstTextView" instance of CheckBox
+  in content_my_first_activity_main.xml
+  -->
+  <string name="large_text_str">My First Large Text Box</string>
+  
+  <!-- String value for the "AndroidCallingTextView" instance of TextView
+  in content_my_first_activity_main.xml
+  -->
+  <string name="android_calling_str">Hello Universe!!! Android Calling!</string>
+  
+  <!-- String value for the "MyFirstCheckBox" instance of CheckBox
+  in content_my_first_activity_main.xml
+  -->
+  <string name="check_box_str">Check this box\nif you dare!</string>
+  
+  <!-- String value for the "MyFirstButton" instance of Button
+  in content_my_first_activity_main.xml
+  -->
+  <string name="button_str">This button\ndoes nothing.</string>
+</resources>

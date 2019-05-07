@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- activity_basic_financial_money_in_or_out.xml
+
+Contains the main layout code for the money in/out button page
+
+Created by: Zac Monroe
+Created on: 2/19/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - strings.xml
+ - colors.xml
+-->
+
+<!-- Using a coordinator layout because it worked well when I added it. No real reason beyond that.
+     -->
+<android.support.design.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="edu.indiana.zcmonroe.basicfinancial.BasicFinancialMoneyInOrOutActivity">
+  
+  <!-- This and its only child: I chose to keep the appbar in this activity. -->
+  <android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+  
+    <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      app:popupTheme="@style/AppTheme.PopupOverlay" />
+  
+  </android.support.design.widget.AppBarLayout>
+  
+  <!--https://developer.android.com/guide/topics/ui/layout/linear.html-->
+  <!-- This activity was simple enough that I didn't need a separate xml file for the content.
+       I am using a linear layout here in order to pretty much fill the screen. -->
+  <LinearLayout
+    android:id="@+id/lin_big_buttons"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical">
+    
+    <!-- This is the button that takes the user to add a transaction that adds money to the budget.
+         -->
+    <Button
+      android:id="@+id/btn_money_in"
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      app:layout_constraintBottom_toBottomOf="@id/btn_money_out"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:text="@string/money_in"
+      android:textColor="@color/money_in"
+      android:textSize="40sp"
+      android:layout_weight=".5"
+      />
+    
+    <!-- This is the button that takes the user to add a transaction that removes money from
+         the budget. -->
+    <Button
+      android:id="@+id/btn_money_out"
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="@id/btn_money_in"
+      android:text="@string/money_out"
+      android:textColor="@color/money_out"
+      android:textSize="40sp"
+      android:layout_weight=".5"
+      />
+  
+  </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

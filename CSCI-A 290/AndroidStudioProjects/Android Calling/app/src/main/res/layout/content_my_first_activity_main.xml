@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- content_my_first_activity_main.xml
+Main Layout file for this project
+Created by: Zac Monroe
+Created on: 1/25/18
+Last modified by: Zac Monroe
+Last modified on: 1/29/18
+Assignment/Project: A290 Android - Android Calling
+Part of: Android Calling
+Refers to:
+ - strings.xml
+ - my_first_activity_main.xml
+ - MyFirstActivityMain.java
+-->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  tools:context="edu.indiana.zcmonroe.androidcalling.MyFirstActivityMain"
+  tools:showIn="@layout/my_first_activity_main">
+  
+  <!-- This is my first instance of TextView.
+  It is completely center-aligned.
+  -->
+  <TextView
+    android:id="@+id/MyFirstTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/large_text_str"
+    android:textAppearance="@android:style/TextAppearance.Material.Large"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+  
+  <!-- This is the Android Calling instance of TextView.
+  It right-aligned.
+  It appears vertically aligned with MyFirstButton.
+  -->
+  <TextView
+    android:id="@+id/AndroidCallingTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/android_calling_str"
+    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.266" />
+  
+  <!-- This my button. It does nothing.
+  It is left-aligned.
+  It appears vertically aligned with AndroidCallingTextView.
+  -->
+  <Button
+    android:id="@+id/MyFirstButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/button_str"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.234" />
+  
+  <!-- This is my instance of TextClock.
+  It is vertically aligned with MyFirstCheckBox.
+  -->
+  <TextClock
+    android:id="@+id/MyFirstClock"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="48dp"
+    android:layout_marginTop="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.9" />
+  
+  <!-- This is my instance of CheckBox.
+  It is vertically aligned with MyFirstClock.
+  It is horizontally aligned on the screen.
+  -->
+  <CheckBox
+    android:id="@+id/MyFirstCheckBox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/check_box_str"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.9" />
+
+</android.support.constraint.ConstraintLayout>

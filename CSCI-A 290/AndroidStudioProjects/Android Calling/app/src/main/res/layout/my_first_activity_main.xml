@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- my_first_activity_main.xml
+UI Layout file for this project
+Created by: Zac Monroe
+Created on: 1/25/18
+Last modified by: Zac Monroe
+Last modified on: 1/29/18
+Assignment/Project: A290 Android - Android Calling
+Part of: Android Calling
+Refers to:
+ - content_my_first_activity_main.xml
+-->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="edu.indiana.zcmonroe.androidcalling.MyFirstActivityMain">
+  
+  <android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+    
+    <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      app:popupTheme="@style/AppTheme.PopupOverlay" />
+  
+  </android.support.design.widget.AppBarLayout>
+  
+  <include layout="@layout/content_my_first_activity_main" />
+  
+  <!-- I removed the floating email button because it was
+  pointless for this project, and got in the way. -->
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+AndroidManifest.xml
+
+Contains some of the app's main xml code
+
+Created by: Zac Monroe
+Created on: 2/7/18
+Last modified by: Zac Monroe
+Last modified on: 2/7/18
+Assignment/Project: My First Activity/HW Project 2
+Part of: activity_first_test_main.xml
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="edu.indiana.zcmonroe.myfirstactivity">
+
+  <!--
+  Changed the theme of the application from @style/AppTheme to @android:style/Theme.Dialog
+  -->
+  <application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@android:style/Theme.Dialog">
+    <activity
+      android:name=".FirstTestActivityMainActivity"
+      android:label="@string/app_name"
+      android:theme="@style/AppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
+
+</manifest>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_first_real_app_about.xml
+
+Layout file for the "About" activity
+
+Created by: Zac Monroe
+Created on: 2/15/18
+Last modified by: Zac Monroe
+Last modified on: 2/15/18
+Assignment/Project: A290 Android First Real App
+Refers to:
+ - strings.xml
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/AboutScrollView"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="10dp" >
+  
+  <!-- This is the text that appears to the user. -->
+  <TextView
+    android:id="@+id/txt_AboutContent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/AboutText"
+    />
+
+</ScrollView>

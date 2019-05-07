@@ -1,0 +1,81 @@
+Basic Financial v1.0 User Guide
+
+- Made by Zac Monroe for A290 Android App Development at IUB
+
+--------------------------------------------------------------------------------
+
+  Hello and welcome to Basic Financial! We are here to assist you in your
+financial life. Whether you're strapped for cash or a 10% shareholder for Apple,
+you need a budget in order to not go broke. Basic Financial makes that part of
+your life simple by giving you the tools for personal financial success.
+
+  Budgeting is the name of the game when it comes to managing your nickels and
+dimes; without any form of a budget, money can slip right out from your
+fingertips, week after week, only being noticed when you need it the most. Our
+app makes this simple: you add a transaction to the week, say whether it puts
+money into the budget or takes money out of the budget, fill out a small form,
+and BOOM! You've got yourself a completed transaction for the week.
+
+  Regarding the form, you just need to give the transaction a name -- something
+like "Starbucks" or "Phone bill" or "Tax refund" --, a dollar amount, and a
+small tag to provide any extra description you might want (such as "Bi-weekly",
+"Necessity", "Leisure", etc). Checking a small box lets the app know whether
+this transaction is of a few special types: Paycheck, Bill, and Loan. If you
+check that the transaction is a bill or a loan (and then add the transaction to
+the week), the "Special" column in your budget will say what it is. If you check
+the Loan checkbox that appears after checking the Bill checkbox, not only will
+the Special value for that transaction be "Loan"; you'll also get some nifty
+tools for managing your loan! Just input what it asks for and you can get some
+helpful information for future planning for the loan and its payments. Do note
+that the app only stores the payment amount for the loan; if you want to access
+the special tools again, you'll have to go through the process of adding another
+transaction (though if you don't want to add it again, you don't have to).
+
+  If there are any of the fields that you don't want to fill in in the forms,
+that's okay too! Our app is structured in a way that each of those fields are
+completely optional.
+
+  On the main screen, you can delete any of the transactions that you've added
+to the current week by the press of the X button next to it. Below all the
+week's transactions is the amount of money you have left to spend before going
+broke as well as a couple other informative tips about what you can do with
+whatever remaining money you have.
+
+  Is 7 days not enough for you? Try going to the budget screen for a later week
+by pressing the Next button at the top. You can go back to the week you were
+just viewing by pressing the Prev button on the opposite side.
+
+  If you're thinking about investing the money that you've saved by budgeting
+with Basic Financial, we can sure help you with that too. Access the navigation
+drawer by either pressing the button in the top left of the Budgeting screen or
+by swiping in from the left side of the screen: Viola, navigation! From here,
+you can go to the investing tools by tapping the Investment Mapping option.
+
+  Basic Financial's investment tools are for estimation only and should be taken
+with a grain of salt. We have no way of accurately predicting any market for any
+investment, and we unfortunately cannot guarantee any return on investment for
+our users.
+
+  Add a principally invested amount and an expected yearly growth amount. The
+next field, the Weekly contribution field, is a well-kept secret in the world of
+investing. Yes, continually compounded interest is extremely powerful, but
+what's even more powerful is a habit. Adding a specified amount of cash to an
+investment each week (this is possible with some investments but not all) can
+exponentially change the final outcome of the return. Building this habit also
+can help promote healthy spending habits otherwise, so if you've got the cash,
+what are you waiting for?
+
+  The last main screen of Basic Financial, also accessed from the navigation
+drawer, is the Settings menu. There's not much there right now; why do you think
+we're called BASIC Financial?! Eventually, as we add more and more features, we
+will give you more components to tinker with on this page. Until then, you can
+view any of the tags you've given to a transaction and view some basic info
+about the app from here.
+
+  That's about as much as I'm going to tell you, Padawan User. Now go out there
+and show your wallet what you're made of!
+
+-------------------------------------------------------------------------------
+
+- Basic Financial Team
+  - (Zac Monroe)

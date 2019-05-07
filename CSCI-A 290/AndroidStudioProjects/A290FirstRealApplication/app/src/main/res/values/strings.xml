@@ -1,0 +1,49 @@
+<!-- strings.xml
+
+Primary string values file for the app
+
+Created by: Zac Monroe
+Created on: 2/14/18
+Last modified by: Zac Monroe
+Last modified on: 2/17/18
+Assignment/Project: A290 Android First Real App
+Referred to by:
+ - content_first_real_app_main.xml
+-->
+
+<resources>
+  <string name="app_name">A290 First Real Application</string>
+  <string name="action_settings">Settings</string>
+  
+  <!-- These are the strings that I added for this project. -->
+  
+  <!-- These strings are for the main menu & the about screen. -->
+  <string name="MainTitle">Welcome to my Sudoku App</string>
+  <string name="ContinueButtonLabel">Continue</string>
+  <string name="NewButtonLabel">New Game</string>
+  <string name="AboutButtonLabel">About</string>
+  <string name="ExitButtonLabel">Exit</string>
+  <string name="AboutText">Sudoku is a logic-based game in which one must place one of each of the numbers 1-9 in rows, columns, and 3x3 boxes &#8212; all at the same time &#8212; within only a main 9x9 grid. The game starts out with some numbers partially filled in (the less that are filled in at the beginning, the harder). Good luck and have fun!!</string>
+  <string name="AboutTitle">A290 Sudoku - About My First Real Application</string>
+  
+  <!-- These strings are for the settings menu. -->
+  <string name="SettingsLabel">Settings&#8230;</string>
+  <string name="SettingsTitle">A290 First Real Application Settings</string>
+  <string name="SettingsShortcut">s</string>
+  <string name="MusicTitle">Music</string>
+  <string name="MusicDetail">Play Background Music</string>
+  <string name="HintsTitle">Hints</string>
+  <string name="HintsDetail">Show Hints During Play</string>
+  
+  <!-- These strings are for the new game menu. -->
+  <string name="NewGameTitle">Difficulty Level</string>
+  <string name="EasyLabel">Easy</string>
+  <string name="MediumLabel">Medium</string>
+  <string name="HardLabel">Hard</string>
+  
+  <!-- These are the strings for the actual game-play activity -->
+  <string name="GameLabel">Game</string>
+  <string name="NoMovesLabel">No moves possible</string>
+  <string name="KeypadTitle">Keypad</string>
+  
+</resources>

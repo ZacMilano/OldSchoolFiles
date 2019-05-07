@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- content_basic_financial_invest.xml
+
+Contains the content views for the investing activity
+
+Created by: Zac Monroe
+Created on: 2/18/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - strings.xml
+ - dimens.xml
+ - colors.xml
+ - activity_basic_financial_invest.xml
+ - content_basic_financial_horizontal_divider.xml
+ - content_basic_financial_vertical_divider.xml
+-->
+
+<!-- This is the activity's main layout. -->
+<LinearLayout
+  android:id="@+id/lin_investing"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:showIn="@layout/activity_basic_financial_invest"
+  app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  android:padding="10dp">
+  
+  <!-- This is the horizontal linear layout that contains the elements for the "Principal" text
+       entry field. -->
+  <LinearLayout
+    android:id="@+id/lin_principal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    
+    <!-- This is the label text for the principal investment value. -->
+    <TextView
+      android:id="@+id/txt_principal"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".45"
+      android:text="@string/invest_principal"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    
+    <!-- This is the label text for the currency. -->
+    <TextView
+      android:id="@+id/txt_dollar_sign_principal"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".05"
+      android:labelFor="@id/edit_principal"
+      android:text="@string/dollar_sign"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    
+    <!-- This is the text entry field (numbers and . only) for the principal investment value. -->
+    <EditText
+      android:id="@+id/edit_principal"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".5"
+      android:inputType="numberDecimal"/>
+  
+  </LinearLayout>
+  
+  <!-- This is the horizontal linear layout that contains the elements for the "growth rate" text
+       entry field. -->
+  <LinearLayout
+    android:id="@+id/lin_growth_rate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    
+    <!-- This is the label text for the expected investment growth rate. -->
+    <TextView
+      android:id="@+id/txt_growth_rate"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".5"
+      android:labelFor="@id/edit_growth_rate"
+      android:text="@string/invest_growth_rate"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+    <!-- This is the text entry field (numbers and . only) for the investment's growth rate. -->
+    <EditText
+      android:id="@+id/edit_growth_rate"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".45"
+      android:inputType="numberDecimal"/>
+    
+    <!-- This is the label text for the percent sign for the investment's growth rate. -->
+    <TextView
+      android:id="@+id/txt_percent_sign"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".05"
+      android:text="@string/percentage_sign"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+  </LinearLayout>
+  
+  <!-- This is the horizontal linear layout that contains the disclaimer. -->
+  <LinearLayout
+    android:id="@+id/lin_disclaimer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    
+    <!-- This view exists for padding; I didn't want much vertical padding so I
+         decided to use a raw view object and make its layout weights shape the
+         visible views accordingly. -->
+    <View
+      android:id="@+id/view_invest_disclaimer_left_space_maker"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_weight=".05"/>
+    
+    <!-- This is the label text for the disclaimer. -->
+    <TextView
+      android:id="@+id/txt_disclaimer"
+      android:text="@string/invest_disclaimer"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".9"
+      android:textAppearance="@style/TextAppearance.AppCompat.Notification.Info"/>
+    
+    <!-- This view exists for padding; I didn't want much vertical padding so I
+         decided to use a raw view object and make its layout weights shape the
+         visible views accordingly. -->
+    <View
+      android:id="@+id/view_invest_disclaimer_right_space_maker"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_weight=".05"/>
+  
+  </LinearLayout>
+  
+  <!-- This is the horizontal linear layout that contains the elements for the "contribution" text
+       entry field. -->
+  <LinearLayout
+    android:id="@+id/lin_contribution"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:orientation="horizontal">
+    
+    <!-- This is the label text for the user's weekly contribution to an investment. -->
+    <TextView
+      android:id="@+id/txt_contribution"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".45"
+      android:text="@string/invest_weekly_contrib"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    
+    <!-- This is the label text for the currency. -->
+    <TextView
+      android:id="@+id/txt_dollar_sign"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".05"
+      android:labelFor="@id/edit_contribution"
+      android:text="@string/dollar_sign"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+    <!-- This is the text entry field (numbers and . only) for the user's weekly contribution
+         to the investment. -->
+    <EditText
+      android:id="@+id/edit_contribution"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".5"
+      android:inputType="numberDecimal"/>
+  
+  </LinearLayout>
+  
+  <!-- This is the button that calculates the values of the below text fields
+       whose text value is defaulted to the empty string. -->
+  <Button
+    android:id="@+id/btn_calculate_investment"
+    android:text="@string/invest_calculate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"/>
+  
+  <!-- This is the vertical linear layout that contains the elements for the table where
+       values of the investment are displayed with their corresponding times in the market. -->
+  <LinearLayout
+    android:id="@+id/lin_investment_table"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+    
+    <!-- This is a visible pseudo-table divider. -->
+    <include layout="@layout/content_basic_financial_horizontal_divider" />
+    
+    <!-- This is the horizontal linear layout that contains the elements for displaying the
+         headers of the pseudo columns of the investment value table. -->
+    <LinearLayout
+      android:id="@+id/lin_investment_table_header"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:background="@color/colorAccent">
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+      
+      <!-- This is the column header for the "After..." column. -->
+      <TextView
+        android:id="@+id/txt_after_amount_of_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/after_col_weight"
+        android:text="@string/invest_after_col_head"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+        android:padding="5dp"/>
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+  
+      <!-- This is the column header for the "You'd ideally have..." column. -->
+      <TextView
+        android:id="@+id/txt_investment_table_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/investment_worth_col_weight"
+        android:text="@string/invest_result_col_head"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+        android:padding="5dp"/>
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+    
+    </LinearLayout>
+  
+    <!-- This is a visible pseudo-table divider. -->
+    <include layout="@layout/content_basic_financial_horizontal_divider" />
+    
+    <!-- This is the horizontal linear layout that contains the elements for displaying the
+         value of the investment after a month. -->
+    <LinearLayout
+      android:id="@+id/lin_investment_table_1_mo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+      
+      <!-- This is the label text for the investment's value after 1 month of what's expected. -->
+      <TextView
+        android:id="@+id/txt_after_1_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/after_col_weight"
+        android:text="@string/invest_one_month"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+      
+      <!-- This is the text element for the currency. -->
+      <TextView
+        android:id="@+id/txt_dollar_sign_1_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/dollar_sign_weight"
+        android:text="@string/dollar_sign"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is the text element for the value of the investment after 1 month. -->
+      <TextView
+        android:id="@+id/txt_investment_value_1_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/investment_balance_weight"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+    
+    </LinearLayout>
+  
+    <!-- This is a visible pseudo-table divider. -->
+    <include layout="@layout/content_basic_financial_horizontal_divider" />
+    
+    <!-- This is the horizontal linear layout that contains the elements for displaying the
+         value of the investment after 6 months. -->
+    <LinearLayout
+      android:id="@+id/lin_investment_table_6_mo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+      
+      <!-- This is the label text for the investment's value after 6 months of what's expected. -->
+      <TextView
+        android:id="@+id/txt_after_6_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/after_col_weight"
+        android:text="@string/invest_six_months"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+  
+      <!-- This is the text element for the currency. -->
+      <TextView
+        android:id="@+id/txt_dollar_sign_6_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/dollar_sign_weight"
+        android:text="@string/dollar_sign"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is the text element for the value of the investment after 6 months. -->
+      <TextView
+        android:id="@+id/txt_investment_value_6_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/investment_balance_weight"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+    
+    </LinearLayout>
+  
+    <!-- This is a visible pseudo-table divider. -->
+    <include layout="@layout/content_basic_financial_horizontal_divider" />
+    
+    <!-- This is the horizontal linear layout that contains the elements for displaying the
+         value of the investment after a year. -->
+    <LinearLayout
+      android:id="@+id/lin_investment_table_12_mo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+      
+      <!-- This is the label text for the investment's value after 1 year of what's expected. -->
+      <TextView
+        android:id="@+id/txt_after_12_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/after_col_weight"
+        android:text="@string/invest_twelve_months"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+  
+      <!-- This is the text element for the currency. -->
+      <TextView
+        android:id="@+id/txt_dollar_sign_12_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/dollar_sign_weight"
+        android:text="@string/dollar_sign"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is the text element for the value of the investment after 1 year. -->
+      <TextView
+        android:id="@+id/txt_investment_value_12_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/investment_balance_weight"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+    
+    </LinearLayout>
+  
+    <!-- This is a visible pseudo-table divider. -->
+    <include layout="@layout/content_basic_financial_horizontal_divider" />
+    
+    
+    <!-- This is the horizontal linear layout that contains the elements for displaying the
+         value of the investment after 2 years. -->
+    <LinearLayout
+      android:id="@+id/lin_investment_table_24_mo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+  
+      <!-- This is the label text for the investment's value after 2 years of what's expected. -->
+      <TextView
+        android:id="@+id/txt_after_24_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/after_col_weight"
+        android:text="@string/invest_twenty_four_months"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+  
+      <!-- This is the text element for the currency. -->
+      <TextView
+        android:id="@+id/txt_dollar_sign_24_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/dollar_sign_weight"
+        android:text="@string/dollar_sign"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is the text element for the value of the investment after 2 years. -->
+      <TextView
+        android:id="@+id/txt_investment_value_24_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/investment_balance_weight"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+    
+    </LinearLayout>
+  
+    <!-- This is a visible pseudo-table divider. -->
+    <include layout="@layout/content_basic_financial_horizontal_divider" />
+    
+    <!-- This is the horizontal linear layout that contains the elements for displaying the
+         value of the investment after 5 years. -->
+    <LinearLayout
+      android:id="@+id/lin_investment_table_60_mo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+  
+      <!-- This is the label text for the investment's value after 5 years of what's expected. -->
+      <TextView
+        android:id="@+id/txt_after_60_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/after_col_weight"
+        android:text="@string/invest_sixty_months"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+  
+      <!-- This is the text element for the currency. -->
+      <TextView
+        android:id="@+id/txt_dollar_sign_60_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/dollar_sign_weight"
+        android:text="@string/dollar_sign"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is the text element for the value of the investment after 5 years. -->
+      <TextView
+        android:id="@+id/txt_investment_value_60_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/investment_balance_weight"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+    
+    </LinearLayout>
+  
+    <!-- This is a visible pseudo-table divider. -->
+    <include layout="@layout/content_basic_financial_horizontal_divider" />
+    
+    <!-- This is the horizontal linear layout that contains the elements for displaying the
+         value of the investment after 10 years. -->
+    <LinearLayout
+      android:id="@+id/lin_investment_table_120_mo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+  
+      <!-- This is the label text for the investment's value after 10 years of what's expected. -->
+      <TextView
+        android:id="@+id/txt_after_120_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/after_col_weight"
+        android:text="@string/invest_one_hundred_twenty_months"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+  
+      <!-- This is the text element for the currency. -->
+      <TextView
+        android:id="@+id/txt_dollar_sign_120_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/dollar_sign_weight"
+        android:text="@string/dollar_sign"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is the text element for the value of the investment after 10 years. -->
+      <TextView
+        android:id="@+id/txt_investment_value_120_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/investment_balance_weight"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+    
+    </LinearLayout>
+  
+    <!-- This is a visible pseudo-table divider. -->
+    <include layout="@layout/content_basic_financial_horizontal_divider" />
+    
+    <!-- This is the horizontal linear layout that contains the elements for displaying the
+         value of the investment after 20 years. -->
+    <LinearLayout
+      android:id="@+id/lin_investment_table_240_mo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+  
+      <!-- This is the label text for the investment's value after 20 years of what's expected. -->
+      <TextView
+        android:id="@+id/txt_after_240_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/after_col_weight"
+        android:text="@string/invest_two_hundred_forty_months"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+  
+      <!-- This is the text element for the currency. -->
+      <TextView
+        android:id="@+id/txt_dollar_sign_240_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/dollar_sign_weight"
+        android:text="@string/dollar_sign"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is the text element for the value of the investment after 20 years. -->
+      <TextView
+        android:id="@+id/txt_investment_value_240_mo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/investment_balance_weight"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+      <!-- This is a visible pseudo-table divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+    
+    </LinearLayout>
+  
+    <!-- This is a visible pseudo-table divider. -->
+    <include layout="@layout/content_basic_financial_horizontal_divider" />
+  
+  </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- content_basic_financial_main.xml
+
+Contains the content views for the main activity
+
+Created by: Zac Monroe
+Created on: 2/18/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - activity_basic_financial_main.xml
+ - dimens.xml
+ - strings.xml
+ - colors.xml
+ - content_basic_financial_vertical_divider.xml
+ - content_basic_financial_horizontal_divider.xml
+-->
+
+<!-- This is the activity's main layout. I went with a vertically-oriented LinearLayout
+     because it allowed for a nice separation of the week navigation area from the view
+     of the transactions. -->
+<LinearLayout
+  android:id="@+id/lin_main_activity_main"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  android:orientation="vertical"
+  tools:showIn="@layout/activity_basic_financial_main">
+  
+  <!-- This is the part of the screen where it says "Week" followed by a number, surrounded
+       by buttons that say "Prev" and "Next" (to go between each of the Activity's weeks). -->
+  <LinearLayout
+    android:id="@+id/lin_budget_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimaryDark">
+  
+     <!-- This is the button whose functionality is to change the view to the previous week. -->
+    <Button
+      android:id="@+id/btn_prev"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="@string/prev"
+      android:layout_weight=".25"/>
+  
+    <!-- This is the text whose purpose is to show which week is being displayed. -->
+    <TextView
+      android:id="@+id/txt_week_label"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".5"
+      android:text="@string/week_label"
+      android:textAlignment="center"
+      android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
+  
+    <!-- This is the button whose functionality is to change the view to the next week. -->
+    <Button
+      android:id="@+id/btn_next"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="@string/next"
+      android:layout_weight=".25"/>
+    
+  </LinearLayout>
+  
+  <!-- This area is where the transactions for the given week are to be displayed. I decided on
+       using a LinearLayout because it neatly organizes all the fields that I need to be shown. -->
+  <LinearLayout
+    android:id="@+id/lin_transactions"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    
+    <!-- This is the linear layout that contains the header row's textview elements and column
+         dividers. -->
+    <LinearLayout
+      android:id="@+id/lin_header"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+      
+      <!-- Ths is the text for the column that indicates whether the transaction was a purchase
+           or an addition of money. -->
+      <TextView
+        android:id="@+id/txt_sign_header"
+        android:text="@string/plus_or_minus"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/sign_col_weight"/>
+  
+      <!-- This is the text for the column that shows the value of the transaction. -->
+      <TextView
+        android:id="@+id/txt_amount_header"
+        android:text="@string/trans_amount"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/amount_col_weight"/>
+  
+      <!-- This is a column divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+  
+      <!-- This is the text for the column that shows the label that the user gave to the
+           transaction. -->
+      <TextView
+        android:id="@+id/txt_label_header"
+        android:text="@string/trans_label"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/label_col_weight"/>
+  
+      <!-- This is a column divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+  
+      <!-- This is the text for the column that indicates if the transaction is of a special type.
+           -->
+      <TextView
+        android:id="@+id/txt_special_header"
+        android:text="@string/trans_special"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/special_col_weight"/>
+  
+      <!-- This is a column divider. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+  
+      <!-- This is the text for the column that shows a tag if the user added one. -->
+      <TextView
+        android:id="@+id/txt_tag_header"
+        android:text="@string/header_tag"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/tag_col_weight"/>
+  
+      <!-- This is the text for the column that allows the user to delete the transaction. -->
+      <TextView
+        android:id="@+id/txt_delete_header"
+        android:text="@string/x"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/delete_col_weight"/>
+      
+    </LinearLayout>
+  
+    <!-- This is a row divider. -->
+    <include layout="@layout/content_basic_financial_horizontal_divider" />
+  
+    <!-- I used a scroll view because I wanted the user to be able to scroll. -->
+    <ScrollView
+      android:id="@+id/scrl_transactions"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    
+      <!-- Each row below header will be generated and added automatically when a new transaction is
+           added to the week. Upon generation, each row will have a horizontally-oriented
+           LinearLayout element that contains all the child elements of the row.
+           
+           ScrollView can have only one child element, so I decided to wrap the transaction views
+           in yet another LinearLayout. -->
+      <LinearLayout
+        android:id="@+id/lin_scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <!-- This is what will hold the dynamically generated transaction views. -->
+        <LinearLayout
+          android:id="@+id/lin_transactions_container"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+        </LinearLayout>
+  
+        <!-- This is a row divider. -->
+        <include layout="@layout/content_basic_financial_horizontal_divider" />
+        
+        <!-- This holds the text for the remaining money, its label, and the other two tips and
+             their labels below the main money remaining area. -->
+        <LinearLayout
+          android:id="@+id/lin_remaining_money"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="10dp"
+          android:orientation="vertical">
+  
+          <!-- This is the text that labels the remaining money. -->
+          <TextView
+            android:id="@+id/txt_total_remaining_money_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total_remaining"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+  
+          <!-- This is the text whose value is how much money the user can spend throughout the rest
+               of the week before going broke. -->
+          <TextView
+            android:id="@+id/txt_total_remaining_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+  
+          <!-- This is a row divider. -->
+          <include layout="@layout/content_basic_financial_horizontal_divider" />
+  
+          <!-- This is a label for how many purchases can be made at $20 with the remaining money
+               before the user goes broke. -->
+          <TextView
+            android:id="@+id/txt_20_purchases_remaining_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/purchases_remaining"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+  
+          <!-- This stores the value for the amount of $20 purchases that can be made. -->
+          <TextView
+            android:id="@+id/txt_20_purchases_remaining"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+  
+          <!-- This is a row divider. -->
+          <include layout="@layout/content_basic_financial_horizontal_divider" />
+  
+          <!-- This is the label for the maximum average price of 10 purchases that can be made with
+               with the remaining money such that the user breaks even. -->
+          <TextView
+            android:id="@+id/txt_cost_of_10_remaining_purchases_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/avg_purchase_price"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+  
+          <!-- This is the value of the 10 remaining purchases that would have to happen for the
+               user to break even. -->
+          <TextView
+            android:id="@+id/txt_cost_of_10_remaining_purchases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+  
+          <!-- This is a row divider. -->
+          <include layout="@layout/content_basic_financial_horizontal_divider" />
+
+        </LinearLayout>
+        
+      </LinearLayout>
+      
+    </ScrollView>
+    
+  </LinearLayout>
+  
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- colors.xml
+
+Primary color values file for the app
+
+Created by: Zac Monroe
+Created on: 2/14/18
+Last modified by: Zac Monroe
+Last modified on: 2/17/18
+Assignment/Project: A290 Android First Real App
+Referred to by:
+ - content_first_real_app_main.xml
+ - FirstRealAppPuzzleView.java
+-->
+
+<resources>
+  <color name="colorPrimary">#3F51B5</color>
+  <color name="colorPrimaryDark">#303F9F</color>
+  <color name="colorAccent">#FF4081</color>
+  
+  <!-- These are the colors that I added for this project. -->
+  
+  <!-- This is the background for the main menu. -->
+  <color name="background">#3500FFFF</color>
+  
+  <!-- These are the colors for the game-play interface. -->
+  <color name="PuzzleBackground">#ffe6f0ff</color>
+  <color name="PuzzleHiLite">#ffffffff</color>
+  <color name="PuzzleLight">#64c6d4ef</color>
+  <color name="PuzzleDark">#6456648f</color>
+  <color name="PuzzleForeground">#ff000000</color>
+  <color name="PuzzleSelected">#64ff8000</color>
+  <color name="PuzzleHint0">#64ff0000</color>
+  <color name="PuzzleHint1">#6400ff80</color>
+  <color name="PuzzleHint2">#2000ff80</color>
+</resources>

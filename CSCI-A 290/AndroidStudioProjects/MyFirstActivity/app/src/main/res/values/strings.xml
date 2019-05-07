@@ -1,0 +1,19 @@
+<!--
+strings.xml
+
+Contains the app's string values
+
+Created by: Zac Monroe
+Created on: 2/7/18
+Last modified by: Zac Monroe
+Last modified on: 2/7/18
+Assignment/Project: My First Activity/HW Project 2
+Part of: content_first_test_activity_main.xml
+-->
+<resources>
+  <string name="app_name">My First Activity</string>
+  <string name="action_settings">Settings</string>
+  
+  <!-- The string for the text that appears on the main screen. -->
+  <string name="main_screen_str">Welcome to the jungle.</string>
+</resources>

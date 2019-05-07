@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- content_basic_financial_money_out.xml
+
+Contains the content layout code for the money out form
+
+Created by: Zac Monroe
+Created on: 2/21/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - strings.xml
+ - colors.xml
+ - activity_basic_financial_money_out.xml
+-->
+
+<!-- This is the main, vertically-oriented linear layout that contains the content for this
+     activity. -->
+<LinearLayout
+  android:id="@+id/lin_money_out_main"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  android:orientation="vertical"
+  tools:showIn="@layout/activity_basic_financial_money_out"
+  android:padding="10dp">
+  
+  <!-- This is the horizontal linear layout that contains the elements for where the user
+       inputs their label for the transaction. -->
+  <LinearLayout
+    android:id="@+id/lin_label"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+  
+    <!-- This is the text that indicates to enter a label next to it. -->
+    <TextView
+      android:id="@+id/txt_label"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".5"
+      android:labelFor="@id/edit_label"
+      android:text="@string/trans_label"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+    <!-- This is the field in which the user inputs their label for the transaction. -->
+    <EditText
+      android:id="@+id/edit_label"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".5"
+      android:inputType="text"/>
+  
+  </LinearLayout>
+  
+  <!-- This is the horizontal linear layout that contains the elements for where the user
+       inputs their amount for the transaction. -->
+  <LinearLayout
+    android:id="@+id/lin_amount"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+  
+    <!-- This is the text that indicates to enter a number in edit_amount. -->
+    <TextView
+      android:id="@+id/txt_amount"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".45"
+      android:text="@string/trans_amount"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+    <!-- This is the text for the currency. -->
+    <TextView
+      android:id="@+id/txt_dollar_sign"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".05"
+      android:text="@string/dollar_sign"
+      android:labelFor="@id/edit_amount"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    
+    <!-- This is the field where the user inputs the dollar value of the transaction. -->
+    <EditText
+      android:id="@+id/edit_amount"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".5"
+      android:inputType="numberDecimal"/>
+    
+  </LinearLayout>
+  
+  <!-- This is the horizontal linear layout that contains the elements for where the user
+       inputs their tag for the transaction. -->
+  <LinearLayout
+    android:id="@+id/lin_tag"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+  
+    <!-- This is the text that indicates to enter a number in edit_tag. -->
+    <TextView
+      android:id="@+id/txt_tag"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".5"
+      android:labelFor="@id/edit_tag"
+      android:text="@string/trans_tag"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+    <!-- This is where the user inputs the tag for the transaction. -->
+    <EditText
+      android:id="@+id/edit_tag"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".5"
+      android:inputType="text"/>
+  
+  </LinearLayout>
+  
+  <!-- This is a checkbox that asks if this transaction is a paycheck. If yes, it sets the
+       transaction's "special" field to "paycheck." -->
+  <CheckBox
+    android:id="@+id/chk_bill"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/is_bill"/>
+  
+  <!--<include layout="@layout/content_basic_financial_loan_checkbox" />-->
+  
+  <!-- This is the button that, when pressed, adds a transaction to the week's array list with
+       data from the EditText views above. -->
+  <Button
+    android:id="@+id/btn_add_money_out"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:text="@string/add_transaction"
+    android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse" />
+  
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- content_basic_financial_loan_checkbox.xml
+
+Contains the content layout code for the "Loan?" checkbox that is pushed into the "money out"
+form when the "Bill?" checkbox is ticked.
+
+Created by: Zac Monroe
+Created on: 2/27/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - strings.xml
+-->
+
+<!-- This is the main, vertical linear layout for this file. I chose for it to be vertically
+     oriented so that I can push in other layouts below the initial sole child, the checkbox. -->
+<LinearLayout
+  android:id="@+id/lin_loan_main"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+  
+  <!-- This is the checkbox that asks the user if the given transaction is a loan payment. When
+       this box is ticked, the app will push another layout file into this one (below this
+       checkbox).
+       -->
+  <CheckBox
+    android:id="@+id/chk_loan"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/is_loan" />
+  
+</LinearLayout>

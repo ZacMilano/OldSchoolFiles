@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- content_basic_financial_prefs.xml
+
+Contains the main layout code for the main activity
+
+Created by: Zac Monroe
+Created on: 2/20/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - BasicFinancialPrefsActivity.java
+ - activity_basic_financial_main.xml
+ - content_basic_financial_horizontal_divider.xml
+ - strings.xml
+-->
+
+<!-- This is the main tag of this file. I used a LinearLayout to keep everything tidy; using a
+     PreferenceScreen was incompatible with a lot of the things I was doing in the java class
+     for this activity (navigation bar was the main concern), so I am sticking with a LinearLayout.
+     In the future, I may change this to a ListView or something similar, if there are more settings
+     that the user may want changed. -->
+<LinearLayout
+  android:id="@+id/lin_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  app:layout_behavior="@string/appbar_scrolling_view_behavior">
+  
+  <!-- This is just a horizontal divider for the sake of ease of use. -->
+  <include layout="@layout/content_basic_financial_horizontal_divider"/>
+  
+  <!-- This is the container for the "view tags" submenu activity. This is what is clicked to
+       be taken to that activity. -->
+  <LinearLayout
+    android:id="@+id/lin_view_tags_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+    
+    <!-- This is the main text that indicates that user should click it to go to the menu where
+         they would view their tags. Its parent linear layout is what is actually clicked. -->
+    <TextView
+      android:id="@+id/txt_view_tags"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/view_tags"
+      android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+    
+    <!-- This is the horizontal linear layout that contains the subtitle. -->
+    <LinearLayout
+      android:id="@+id/lin_view_tags_subtitle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+      
+      <!-- This view exists for padding of the subtitle; I didn't want much vertical padding so I
+           decided to use a raw view object and make its layout weights shape the
+           visible views accordingly. -->
+      <View
+        android:id="@+id/view_prefs_tags_left_space_maker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight=".05"/>
+      
+      <!-- This is the label text for the subtitle. -->
+      <TextView
+        android:id="@+id/txt_tags_subtitle"
+        android:text="@string/view_tags_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".9"
+        android:textAppearance="@style/TextAppearance.AppCompat.Notification.Info"/>
+      
+      <!-- This view exists for padding of the subtitle; I didn't want much vertical padding so I
+           decided to use a raw view object and make its layout weights shape the
+           visible views accordingly. -->
+      <View
+        android:id="@+id/view_prefs_tags_right_space_maker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight=".05"/>
+    
+    </LinearLayout>
+  
+  </LinearLayout>
+  
+  <!-- This is just a horizontal divider for the sake of ease of use. -->
+  <include layout="@layout/content_basic_financial_horizontal_divider"/>
+  
+  <!-- This is the container for the "about" dialog. When this is clicked, the dialog with
+       information about the app is brought into view. -->
+  <LinearLayout
+    android:id="@+id/lin_about_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+    
+    <!-- This is the main text that indicates that user should click it to view info about the app.
+         Its parent linear layout is what is actually clicked. -->
+    <TextView
+      android:id="@+id/txt_about_app"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/about"
+      android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+    
+    <!-- This is the horizontal linear layout that contains the disclaimer. -->
+    <LinearLayout
+      android:id="@+id/lin_disclaimer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+      
+      <!-- This view exists for padding of the subtitle; I didn't want much vertical padding so I
+           decided to use a raw view object and make its layout weights shape the
+           visible views accordingly. -->
+      <View
+        android:id="@+id/view_invest_disclaimer_left_space_maker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight=".05"/>
+      
+      <!-- This is the label text for the disclaimer. -->
+      <TextView
+        android:id="@+id/txt_disclaimer"
+        android:text="@string/about_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".9"
+        android:textAppearance="@style/TextAppearance.AppCompat.Notification.Info"/>
+      
+      <!-- This view exists for padding of the subtitle; I didn't want much vertical padding so I
+           decided to use a raw view object and make its layout weights shape the
+           visible views accordingly. -->
+      <View
+        android:id="@+id/view_invest_disclaimer_right_space_maker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight=".05"/>
+    
+    </LinearLayout>
+  
+  </LinearLayout>
+  
+  <!-- This is just a horizontal divider for the sake of ease of use. -->
+  <include layout="@layout/content_basic_financial_horizontal_divider"/>
+
+</LinearLayout>

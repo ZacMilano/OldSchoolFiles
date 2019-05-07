@@ -1,0 +1,16 @@
+- Two types of databases?
+  - Operational : can be altered at any moment
+  - Analytical : static collection of data used to analyze past trends/events
+- Database models
+  - Hierarchical : tree-like; limits possible relationships btwn data items
+  - Network : 'many-to-many'; 'mesh'? (visualize neural net
+  - Object-oriented : far less structured; uses 'objects' of data/software rules
+                      for both structure and manipulation
+- Helpful info
+  - Tables ∈ databases
+  - Row vs record : record is a filled-in row?
+  - Schema : set of rules that define the primary key, other attributes for the
+             table/'relation' in question
+  - Primary key : absolutely unique; must be different for every record in the
+                  relation
+  - Each record is an instance of the schema with a unique primary key

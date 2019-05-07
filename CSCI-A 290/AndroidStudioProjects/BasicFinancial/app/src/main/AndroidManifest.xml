@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- AndroidManifest.xml
+
+Contains the activities for the app
+
+Created by: Zac Monroe
+Created on: 2/18/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - strings.xml
+ - BasicFinancialMainActivity.java
+ - BasicFinancialInvestActivity.java
+ - BasicFinancialPrefsActivity.java
+ - BasicFinancialMoneyInOrOutActivity.java
+ - BasicFinancialMoneyInActivity.java
+ - BasicFinancialMoneyOutActivity.java
+-->
+
+<manifest
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  package="edu.indiana.zcmonroe.basicfinancial">
+  
+  <!-- This is the application itself (surprise!). I made the icon myself in MS Paint. -->
+  <application
+    android:allowBackup="true"
+    android:icon="@drawable/basic_financial_icon"
+    android:label="@string/app_name"
+    android:roundIcon="@drawable/basic_financial_icon"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme">
+    
+    <!-- This is the main/budgeting activity. -->
+    <activity
+      android:name=".BasicFinancialMainActivity"
+      android:label="@string/app_name"
+      android:theme="@style/AppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+      
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    
+    <!-- This is the investment mapping activity. -->
+    <activity
+      android:name=".BasicFinancialInvestActivity"
+      android:label="@string/investing_title"
+      android:theme="@style/AppTheme.NoActionBar">
+      
+    </activity>
+  
+    <!-- This is the settings activity. -->
+    <activity
+      android:name=".BasicFinancialPrefsActivity"
+      android:label="@string/settings_title"
+      android:theme="@style/AppTheme.NoActionBar">
+  
+    </activity>
+  
+    <!-- This is the activity where one presses one of two buttons to choose
+    either the "money in" or "money out" form. -->
+    <activity
+      android:name=".BasicFinancialMoneyInOrOutActivity"
+      android:label="@string/money_in_or_out_title"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:parentActivityName=".BasicFinancialMainActivity">
+      
+    </activity>
+  
+    <!-- This is the "money in" form activity. -->
+    <activity
+      android:name=".BasicFinancialMoneyInActivity"
+      android:label="@string/money_in"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:parentActivityName=".BasicFinancialMoneyInOrOutActivity">
+    </activity>
+  
+    <!-- This is the "money out" form activity. -->
+    <activity
+      android:name=".BasicFinancialMoneyOutActivity"
+      android:label="@string/money_out"
+      android:theme="@style/AppTheme.NoActionBar"
+      android:parentActivityName=".BasicFinancialMoneyInOrOutActivity">
+  
+    </activity>
+    
+  </application>
+
+</manifest>

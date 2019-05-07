@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- arrays.xml
+
+Array values file for A290FirstRealApp
+
+Created by: Zac Monroe
+Created on: 2/15/18
+Last modified by: Zac Monroe
+Last modified on: 2/17/18
+Assignment/Project: A290 Android First Real App
+Referred to by:
+ -
+-->
+
+<resources>
+  <array name="difficulty">
+    <item>@string/EasyLabel</item>
+    <item>@string/MediumLabel</item>
+    <item>@string/HardLabel</item>
+  </array>
+</resources>

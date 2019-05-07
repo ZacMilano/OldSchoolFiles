@@ -1,0 +1,33 @@
+<!-- dimens.xml
+
+Contains some dimension values for the app
+
+Created by: Zac Monroe
+First modified on: 2/25/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - [none]
+-->
+
+<resources>
+  <dimen name="fab_margin">16dp</dimen>
+  
+  <!-- These are some weight values that I used for pseudo-table rows, a LinearLayout,
+       in the main activity. -->
+  <dimen name="sign_col_weight">0.03</dimen>
+  <dimen name="amount_col_weight">0.19</dimen>
+  <dimen name="label_col_weight">0.25</dimen>
+  <dimen name="special_col_weight">0.2</dimen>
+  <dimen name="tag_col_weight">0.23</dimen>
+  <dimen name="delete_col_weight">0.1</dimen>
+  
+  <!-- These are some weight values that I used for pseudo-tables (LinearLayouts) in the
+       investment mapping activity. -->
+  <dimen name="after_col_weight">.4</dimen>
+  <dimen name="investment_worth_col_weight">.6</dimen>
+  <dimen name="dollar_sign_weight">.05</dimen>
+  <dimen name="investment_balance_weight">.55</dimen>
+  
+</resources>

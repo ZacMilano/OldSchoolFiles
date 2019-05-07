@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+activity_first_test_main.xml
+
+Contains the activity's layout xml code
+
+Created by: Zac Monroe
+Created on: 2/7/18
+Last modified by: Zac Monroe
+Last modified on: 2/7/18
+Assignment/Project: My First Activity/HW Project 2
+Part of: content_first_test_activity_main.xml
+-->
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="edu.indiana.zcmonroe.myfirstactivity.FirstTestActivityMainActivity">
+
+  <!--
+  I removed the action bar from the top.
+  -->
+
+  <include layout="@layout/content_first_test_activity_main" />
+
+  <!--
+  I removed the floating email button from the bottom.
+  -->
+
+</android.support.design.widget.CoordinatorLayout>

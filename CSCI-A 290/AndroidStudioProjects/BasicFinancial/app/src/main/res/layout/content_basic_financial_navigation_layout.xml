@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- content_basic_financial_navigation_layout.xml
+
+Contains the menu items for the navigation drawer
+
+Created by: Zac Monroe
+Created on: 2/18/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - BasicFinancialMainActivity.java
+ - content_basic_financial_main.xml
+ - strings.xml
+ - colors.xml
+-->
+
+<!-- This is the main layout tag for the file. I used a LinearLayout because it is simple enough.
+     -->
+<LinearLayout
+  android:id="@+id/lin_nav_title_main"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/colorPrimary"
+  android:orientation="vertical">
+  
+  <!-- This is the linear layout that holds the logo and the extra image. This goes at the top. -->
+  <LinearLayout
+    android:id="@+id/lin_logo_and_bars"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal">
+    
+    <!-- This is the logo for my app. I wanted it in the navigation drawer so I put it here. -->
+    <ImageView
+      android:id="@+id/img_icon_nav_bar"
+      android:contentDescription="@string/logo_cont_desc"
+      android:layout_width="0dp"
+      android:layout_height="100dp"
+      android:layout_weight=".37"
+      android:background="@drawable/basic_financial_icon"
+      android:padding="20sp"
+      />
+    
+    <!-- This is another image I made in MS Paint; I thought it would look nice next to the logo.
+         -->
+    <ImageView
+      android:id="@+id/img_bars_nav_bar"
+      android:contentDescription="@string/decor_cont_desc"
+      android:layout_width="0dp"
+      android:layout_height="100dp"
+      android:layout_weight=".63"
+      android:background="@drawable/basic_financial_lines_v2"
+      android:padding="20sp"
+      />
+    
+  </LinearLayout>
+  <!-- This is the actual text that is used for the navigation header. -->
+  <TextView
+    android:id="@+id/drawerHeaderTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/navigation_title"
+    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+    android:textColor="@android:color/white"
+    tools:textSize="30sp"
+    android:padding="20sp"/>
+  
+</LinearLayout>

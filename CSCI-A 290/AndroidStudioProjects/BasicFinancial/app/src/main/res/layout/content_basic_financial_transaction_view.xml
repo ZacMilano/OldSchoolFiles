@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- content_basic_financial_transaction_view.xml
+
+Contains the main layout code for a transaction that is added to a week.
+
+Created by: Zac Monroe
+Created on: 2/21/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - strings.xml
+ - colors.xml
+ - dimens.xml
+ - content_basic_financial_vertical_divider.xml
+-->
+
+<!-- This is THE LinearLayout of the Row. -->
+<LinearLayout
+  android:id="@+id/lin_transaction_main"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="horizontal"
+  android:padding="0dp"
+  android:layout_weight="1">
+  
+  <!-- This Text is for the Transaction's "sign;" it is a positive (+) sign if it adds money,
+       and a negative (-) sign if it deducts money (if it is a purchase or an addition of
+       money, basically). -->
+  <TextView
+    android:id="@+id/txt_transaction_sign"
+    android:layout_width="0sp"
+    android:layout_height="wrap_content"
+    android:layout_weight="@dimen/sign_col_weight"
+    android:text="@string/plus"
+    android:textAlignment="center"
+    android:textColor="@color/money_in"
+    />
+  
+  <!-- I decided that the divider looked a little tacky here so I commented it out. -->
+  <!--<include layout="@layout/content_basic_financial_vertical_divider"/>-->
+  
+  <!-- This Text is for the Transaction's "amount." -->
+  <TextView
+    android:id="@+id/txt_transaction_amount"
+    android:layout_width="0sp"
+    android:layout_height="wrap_content"
+    android:layout_weight="@dimen/amount_col_weight"
+    android:padding="2dp"
+    android:text="@string/transaction_default_amount"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="@color/money_in" />
+  
+  <!-- This is a vertical divider whose purpose is to clearly separate column values. -->
+  <include layout="@layout/content_basic_financial_vertical_divider"/>
+  
+  <!-- This Text is for the Transaction's "label." -->
+  <TextView
+    android:id="@+id/txt_transaction_label"
+    android:layout_width="0sp"
+    android:layout_height="wrap_content"
+    android:layout_weight="@dimen/label_col_weight"
+    android:padding="2dp"
+    android:text="@string/transaction_default_label"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+  <!-- This is a vertical divider whose purpose is to clearly separate column values. -->
+  <include layout="@layout/content_basic_financial_vertical_divider"/>
+  
+  <!-- This Text is for the Transaction's "special" field. -->
+  <TextView
+    android:id="@+id/txt_transaction_special"
+    android:layout_width="0sp"
+    android:layout_height="wrap_content"
+    android:layout_weight="@dimen/special_col_weight"
+    android:padding="2dp"
+    android:text=""
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+  <!-- This is a vertical divider whose purpose is to clearly separate column values. -->
+  <include layout="@layout/content_basic_financial_vertical_divider"/>
+  
+  <!-- This Text is for the Transaction's "tag." -->
+  <TextView
+    android:id="@+id/txt_transaction_tag"
+    android:layout_width="0sp"
+    android:layout_height="wrap_content"
+    android:layout_weight="@dimen/tag_col_weight"
+    android:padding="2dp"
+    android:text=""
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+  <!-- I decided that the divider looked a little tacky here so I commented it out. -->
+  <!--<include layout="@layout/content_basic_financial_vertical_divider"/>-->
+  
+  <!-- This button is for deleting the transaction that it appears next to. -->
+  <Button
+    android:id="@+id/btn_delete_transaction"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="@dimen/delete_col_weight"
+    android:text="@string/x"/>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+- A sound database means sound tables
+- Field : smallest structure in the table/database
+  - Naming
+    - Should describe a single property/characteristic
+    - Avoid acronyms/abbreviations
+    - { [A,Z], [a,z], [0,9], _ }
+    - Field should appear only once in the entire DB
+    - Does not store a 'CALCULATED' value of any sort (not '3+5' but rather '8')
+      - No pointer references (you know what I mean)
+- Table
+  - Unique name
+  - About a single object/subject/thing
+  - Avoid acronyms/abbreviations
+  - Avoid including words like 'File', 'Record', 'Table'
+  - { [A,Z], [a,z], [0,9], _ }
+  - Primary key can be more than one field??
+    - 'Composite' primary key (as opposed to 'Simple')
+    - Never optional
+    - Never contains an unknown value
+    - Never modified; static
+- SQL is based on the use of KEYWORDS to build STATEMENTS, EXPRESSIONS,
+  and QUERIES
+  - SELECT, FROM, WHERE, GROUP BY, HAVING
+  - Clauses can be nested
+
+type: mysql –h db.soic.indiana.edu –p –u a290s18_zcmonroe a290s18_zcmonroe
+pswd: my+sql=a290s18_zcmonroe

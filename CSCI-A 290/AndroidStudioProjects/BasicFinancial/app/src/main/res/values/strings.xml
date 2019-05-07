@@ -1,0 +1,112 @@
+<!-- strings.xml
+
+Contains the string values for the app
+
+Created by: Zac Monroe
+Created on: 2/18/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - [none]
+-->
+
+<resources>
+  <string name="app_name">Basic Financial</string>
+  <string name="action_settings">Settings</string>
+  
+  <!-- These are the strings for the navigation bar/toolbar. -->
+  <string name="budgeting_title">Budgeting</string>
+  <string name="investing_title">Investment Mapping</string>
+  <string name="settings_title">Settings</string>
+  <string name="navigation_title">Basic Financial</string>
+  <string name="money_in_or_out_title">Add a Transaction</string>
+  
+  <!-- These are for opening and closing the navigation drawer. -->
+  <string name="open_nav">Open navigation drawer</string>
+  <string name="close_nav">Close navigation drawer</string>
+  
+  
+  <!-- These are the strings that go on the buttons in
+       BasicFinancialMoneyInOrOutActivity. -->
+  <string name="money_out">Money Out</string>
+  <string name="money_in">Money In</string>
+  
+  <!-- These are the strings for the money in and money out forms. -->
+  <string name="trans_label">Label</string>
+  <string name="trans_amount">Amount</string>
+  <string name="add_transaction">Add Transaction</string>
+  <string name="trans_special">Special</string>
+  <string name="trans_tag">Tag (optional)</string>
+  <string name="header_tag">Tag</string>
+  <string name="dollar_sign">$</string>
+  <string name="is_bill">Is this for a bill?</string>
+  <string name="is_paycheck">Is this for a paycheck?</string>
+  <!-- These, specifically, are the strings used in the Loan view. -->
+  <string name="is_loan">Is this for a loan?</string>
+  <string name="loan_balance">Total balance</string>
+  <string name="loan_apr">APR interest rate</string>
+  <string name="percentage_instructions">Enter as a percentage. i.e. if your interest rate is 9%, type 9 and not 0.09%.</string>
+  <string name="percentage_sign">%</string>
+  <string name="loan_calculate">Calculate Loan</string>
+  <string name="loan_how_many_months">How many months to pay off the loan\'s balance with this same monthly payment:</string>
+  <string name="loan_min_payment">Minimum monthly payment needed to finish the loan\'s balance in 12 months:</string>
+  <string name="loan_disclaimer">Warning: pressing the below button will not save any of the information about the loan except the payment information. This table, loan balance, and APR interest rate will not be saved.</string>
+  
+  <!-- These are the strings for the prev/next buttons, and the week label between them. -->
+  <string name="prev">Prev</string>
+  <string name="next">Next</string>
+  <string name="week_label">Week</string>
+  
+  <!-- This super simple string is for deletion buttons. -->
+  <string name="x">X</string>
+  
+  <!-- These strings are accessed by each transaction. They are for the "sign" of the transaction
+       and the "special" field of the transaction. -->
+  <string name="plus_or_minus">±</string>
+  <string name="plus">+</string>z
+  <string name="minus">-</string>
+  <string name="paycheck_special">Paycheck</string>
+  <string name="bill_special">Bill</string>
+  <string name="loan_special">Loan</string>
+  
+  <!-- These string values are for the investment mapping activity. -->
+  <string name="invest_principal">Principal</string>
+  <string name="invest_growth_rate">Expected yearly growth</string>
+  <string name="invest_weekly_contrib">Weekly contribution</string>
+  <string name="invest_disclaimer">Basic Financial cannot guarantee constant growth rate, nor can it guarantee any actual return. This is just an estimator.</string>
+  <string name="invest_calculate">Calculate Investment</string>
+  <string name="invest_after_col_head">After&#8230;</string>
+  <string name="invest_result_col_head">You\'d ideally have&#8230;</string>
+  <string name="invest_one_month">1 month</string>
+  <string name="invest_six_months">6 months</string>
+  <string name="invest_twelve_months">1 year</string>
+  <string name="invest_twenty_four_months">2 years</string>
+  <string name="invest_sixty_months">5 years</string>
+  <string name="invest_one_hundred_twenty_months">10 years</string>
+  <string name="invest_two_hundred_forty_months">20 years</string>
+  
+  <!-- These are the strings that I used in the settings activity. -->
+  <string name="view_tags">View tags</string>
+  <string name="view_tags_subtitle">View any tags that you\'ve made</string>
+  <string name="all_tags">All tags</string>
+  <string name="about">About</string>
+  <string name="about_subtitle">About the app</string>
+  <string name="about_header">About Basic Financial</string>
+  <string name="about_body">- Created by Zac Monroe \n- Originally made for CSCI-A290 Android App development at IUB \n- Version 1.0</string>
+  
+  <!-- These are some contentDescription values for the images in the navigation drawer. -->
+  <string name="logo_cont_desc">Logo for Basic Financial</string>
+  <string name="decor_cont_desc">Some decoration for the navigation drawer</string>
+  
+  <!-- These are some default values for the default transaction. -->
+  <string name="transaction_default_amount">0.00</string>
+  <string name="transaction_default_label">Default</string>
+  
+  <!-- These are for the budgeting activity (the total remaining amount label as well as
+       the labels for the other two tips) -->
+  <string name="total_remaining">Total money remaining for the week:</string>
+  <string name="purchases_remaining">How many $20 purchases you can make before going broke:</string>
+  <string name="avg_purchase_price">Maximum average price of 10 next purchases:</string>
+
+</resources>

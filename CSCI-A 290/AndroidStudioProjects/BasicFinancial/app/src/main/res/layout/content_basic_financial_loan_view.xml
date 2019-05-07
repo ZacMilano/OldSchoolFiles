@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- content_basic_financial_loan_view.xml
+
+Contains the main layout code for when the "Loan?" checkbox is ticked in the MoneyOut Activity.
+
+Created by: Zac Monroe
+Created on: 2/22/18
+Last modified by: Zac Monroe
+Last modified on: 3/2/18
+Assignment/Project: A290 Android: Basic Financial
+Refers to:
+ - strings.xml
+ - colors.xml
+ - content_basic_financial_vertical_divider.xml
+ - content_basic_financial_horizontal_divider.xml
+-->
+
+<!-- This is the main linear layout for each loan view. It is vertically aligned so that it fits
+     in with where it is to be placed. -->
+<LinearLayout
+  android:id="@+id/lin_loan_view"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  app:layout_behavior="@string/appbar_scrolling_view_behavior">
+  
+  <!-- This is the horizontal linear layout for the elements indicating that the user should input
+       the balance of the loan. -->
+  <LinearLayout
+    android:id="@+id/lin_loan_balance"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    
+    <!-- This is the text that tells the user what to input in @id/edit_loan_balance. -->
+    <TextView
+      android:id="@+id/txt_loan_balance_label"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".45"
+      android:text="@string/loan_balance"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    
+    <!-- This text is for the currency. -->
+    <TextView
+      android:id="@+id/txt_dollar_sign"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".05"
+      android:labelFor="@id/edit_loan_balance"
+      android:text="@string/dollar_sign"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    
+    <!-- This is where the user inputs their current loan balance. -->
+    <EditText
+      android:id="@+id/edit_loan_balance"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".5"
+      android:inputType="numberDecimal"/>
+  
+  </LinearLayout>
+  
+  <!-- This is the horizontal linear layout for the elements indicating that the user should input
+       the interest rate of the loan. -->
+  <LinearLayout
+    android:id="@+id/lin_loan_interest"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    
+    <!-- This is the text that indicates that the user should input their loan's APR into
+         @id/edit_loan_label. -->
+    <TextView
+      android:id="@+id/txt_loan_interest_label"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".5"
+      android:labelFor="@id/edit_loan_interest"
+      android:text="@string/loan_apr"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    
+    <!-- This is where the user inputs their APR interest rate for the loan. -->
+    <EditText
+      android:id="@+id/edit_loan_interest"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".45"
+      android:inputType="numberDecimal"/>
+    
+    <!-- This is the text that indicates that the inputted value (into @id/edit_loan_label)
+         is a percentage. -->
+    <TextView
+      android:id="@+id/txt_percent_sign"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".05"
+      android:text="@string/percentage_sign"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+  
+  </LinearLayout>
+  
+  <!-- This is the button whose functionality is to update the bottom two cells in the pseudo-
+       table below with proper values. -->
+  <Button
+    android:id="@+id/btn_calculate_loan"
+    android:text="@string/loan_calculate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"/>
+  
+  <!-- This is just for padding without using the padding attribute. -->
+  <View
+    android:id="@+id/view_loan_calculate_btn_space_maker"
+    android:layout_width="match_parent"
+    android:layout_height="10dp" />
+  
+  <!-- This is the vertical linear layout that contains the table with some helpful tips
+       about the loan. -->
+  <LinearLayout
+    android:id="@+id/lin_loan_table"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    
+    <!-- This is just a divider for the table. -->
+    <include layout="@layout/content_basic_financial_horizontal_divider" />
+    
+    <!-- This is the horizontal linear layout for the top row of the "table." -->
+    <LinearLayout
+      android:id="@+id/lin_loan_table_top_row"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:background="@color/colorAccent">
+      
+      <!-- This is just a divider for the table. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+      
+      <!-- This is the text for the column header for the below value that indicates how long
+           it would take to pay off the given loan. -->
+      <TextView
+        android:id="@+id/txt_loan_how_many_months_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:text="@string/loan_how_many_months"
+        android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+        android:padding="5dp"/>
+      
+      <!-- This is just a divider for the table. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+      
+      <!-- This is the text for the column header for the below value that indicates how much a
+           minimum monthly payment would have to be in order to pay off the loan in a year. -->
+      <TextView
+        android:id="@+id/txt_loan_min_payment_year_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:text="@string/loan_min_payment"
+        android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+        android:padding="5dp" />
+      
+      <!-- This is just a divider for the table. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+    
+    </LinearLayout>
+    
+    <!-- This is just a divider for the table. -->
+    <include layout="@layout/content_basic_financial_horizontal_divider" />
+    
+    <!-- This is the horizontal linear layout for the bottom row of the "table." -->
+    <LinearLayout
+      android:id="@+id/lin_loan_table_bottom_row"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+      
+      <!-- This is just a divider for the table. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+      
+      <!-- This is the text for the value that indicates how long it would take to pay off
+           the given loan. -->
+      <TextView
+        android:id="@+id/txt_loan_how_many_months_value"
+        android:text=""
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+      
+      <!-- This is just a divider for the table. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+      
+      <!-- This is the text for the value that indicates how much a minimum monthly payment would
+           have to be in order to pay off the loan in a year. -->
+      <TextView
+        android:id="@+id/txt_loan_min_payment_year_value"
+        android:text=""
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+      
+      <!-- This is just a divider for the table. -->
+      <include layout="@layout/content_basic_financial_vertical_divider" />
+    
+    </LinearLayout>
+    
+    <!-- This is just a divider for the table. -->
+    <include layout="@layout/content_basic_financial_horizontal_divider" />
+  
+  </LinearLayout>
+  
+  <!-- This is just for padding without using the padding attribute. -->
+  <View
+    android:id="@+id/view_loan_add_transaction_btn_space_maker"
+    android:layout_width="match_parent"
+    android:layout_height="20dp" />
+</LinearLayout>
